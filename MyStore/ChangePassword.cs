@@ -30,20 +30,20 @@ namespace MyStore
 
         private void button2_Click(object sender, EventArgs e)
         {
-            OP.Text = "";
-            NP.Text = "";
-            NP2.Text = "";
+            oldpasstxt.Text = "";
+            newpasstxt.Text = "";
+            rtpasstxt.Text = "";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             
             
-            if (qd.PASSWORD == OP.Text)
+            if (qd.PASSWORD == oldpasstxt.Text)
             {
-                if (NP.Text.Equals(NP2.Text))
+                if (newpasstxt.Text.Equals(rtpasstxt.Text))
                 {
-                    qd.PASSWORD = NP.Text;
+                    qd.PASSWORD = newpasstxt.Text;
                     if (qd.ChangePassword(qd))
                     {
                         MessageBox.Show("Password Changed Successfully");
@@ -53,17 +53,17 @@ namespace MyStore
                 else
                 {
                     MessageBox.Show("Password do not matched!!!!");
-                    OP.Text = "";
-                    NP.Text = "";
-                    NP2.Text = "";
+                    oldpasstxt.Text = "";
+                    newpasstxt.Text = "";
+                    rtpasstxt.Text = "";
                 }
             }
             else
             {
                 MessageBox.Show("Incorrect Old PAssword");
-                OP.Text = "";
-                NP.Text = "";
-                NP2.Text = "";
+                oldpasstxt.Text = "";
+                newpasstxt.Text = "";
+                rtpasstxt.Text = "";
             }
         }
     }

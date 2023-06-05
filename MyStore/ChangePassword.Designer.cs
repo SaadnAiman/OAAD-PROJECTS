@@ -28,106 +28,106 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.OP = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.NP = new System.Windows.Forms.TextBox();
-            this.NP2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.lbloldpass = new System.Windows.Forms.Label();
+            this.oldpasstxt = new System.Windows.Forms.TextBox();
+            this.jnclbl = new System.Windows.Forms.Label();
+            this.lblnpass = new System.Windows.Forms.Label();
+            this.lblnewpass = new System.Windows.Forms.Label();
+            this.newpasstxt = new System.Windows.Forms.TextBox();
+            this.rtpasstxt = new System.Windows.Forms.TextBox();
+            this.btnsubmit = new System.Windows.Forms.Button();
+            this.btnreset = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // lbloldpass
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(8, 86);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 19);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Old Password";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            this.lbloldpass.AutoSize = true;
+            this.lbloldpass.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbloldpass.Location = new System.Drawing.Point(8, 86);
+            this.lbloldpass.Name = "lbloldpass";
+            this.lbloldpass.Size = new System.Drawing.Size(96, 19);
+            this.lbloldpass.TabIndex = 1;
+            this.lbloldpass.Text = "Old Password";
+            this.lbloldpass.Click += new System.EventHandler(this.label1_Click);
             // 
-            // OP
+            // oldpasstxt
             // 
-            this.OP.Location = new System.Drawing.Point(129, 81);
-            this.OP.Multiline = true;
-            this.OP.Name = "OP";
-            this.OP.Size = new System.Drawing.Size(192, 25);
-            this.OP.TabIndex = 3;
+            this.oldpasstxt.Location = new System.Drawing.Point(129, 81);
+            this.oldpasstxt.Multiline = true;
+            this.oldpasstxt.Name = "oldpasstxt";
+            this.oldpasstxt.Size = new System.Drawing.Size(192, 25);
+            this.oldpasstxt.TabIndex = 3;
             // 
-            // label5
+            // jnclbl
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label5.Location = new System.Drawing.Point(101, 18);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(220, 36);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "jewels.n.Crafts";
+            this.jnclbl.AutoSize = true;
+            this.jnclbl.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jnclbl.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.jnclbl.Location = new System.Drawing.Point(101, 18);
+            this.jnclbl.Name = "jnclbl";
+            this.jnclbl.Size = new System.Drawing.Size(220, 36);
+            this.jnclbl.TabIndex = 6;
+            this.jnclbl.Text = "jewels.n.Crafts";
             // 
-            // label2
+            // lblnpass
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(8, 167);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 19);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Retype Password";
+            this.lblnpass.AutoSize = true;
+            this.lblnpass.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnpass.Location = new System.Drawing.Point(8, 167);
+            this.lblnpass.Name = "lblnpass";
+            this.lblnpass.Size = new System.Drawing.Size(116, 19);
+            this.lblnpass.TabIndex = 7;
+            this.lblnpass.Text = "Retype Password";
             // 
-            // label3
+            // lblnewpass
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(8, 126);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(103, 19);
-            this.label3.TabIndex = 8;
-            this.label3.Text = "New Password";
+            this.lblnewpass.AutoSize = true;
+            this.lblnewpass.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnewpass.Location = new System.Drawing.Point(8, 126);
+            this.lblnewpass.Name = "lblnewpass";
+            this.lblnewpass.Size = new System.Drawing.Size(103, 19);
+            this.lblnewpass.TabIndex = 8;
+            this.lblnewpass.Text = "New Password";
             // 
-            // NP
+            // newpasstxt
             // 
-            this.NP.Location = new System.Drawing.Point(129, 121);
-            this.NP.Multiline = true;
-            this.NP.Name = "NP";
-            this.NP.Size = new System.Drawing.Size(192, 25);
-            this.NP.TabIndex = 9;
+            this.newpasstxt.Location = new System.Drawing.Point(129, 121);
+            this.newpasstxt.Multiline = true;
+            this.newpasstxt.Name = "newpasstxt";
+            this.newpasstxt.Size = new System.Drawing.Size(192, 25);
+            this.newpasstxt.TabIndex = 9;
             // 
-            // NP2
+            // rtpasstxt
             // 
-            this.NP2.Location = new System.Drawing.Point(129, 162);
-            this.NP2.Multiline = true;
-            this.NP2.Name = "NP2";
-            this.NP2.Size = new System.Drawing.Size(192, 25);
-            this.NP2.TabIndex = 10;
+            this.rtpasstxt.Location = new System.Drawing.Point(129, 162);
+            this.rtpasstxt.Multiline = true;
+            this.rtpasstxt.Name = "rtpasstxt";
+            this.rtpasstxt.Size = new System.Drawing.Size(192, 25);
+            this.rtpasstxt.TabIndex = 10;
             // 
-            // button1
+            // btnsubmit
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(201, 212);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 28);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Submit";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnsubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsubmit.Location = new System.Drawing.Point(201, 212);
+            this.btnsubmit.Name = "btnsubmit";
+            this.btnsubmit.Size = new System.Drawing.Size(111, 28);
+            this.btnsubmit.TabIndex = 11;
+            this.btnsubmit.Text = "Submit";
+            this.btnsubmit.UseVisualStyleBackColor = true;
+            this.btnsubmit.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnreset
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(54, 212);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(111, 28);
-            this.button2.TabIndex = 12;
-            this.button2.Text = "Reset";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnreset.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnreset.Location = new System.Drawing.Point(54, 212);
+            this.btnreset.Name = "btnreset";
+            this.btnreset.Size = new System.Drawing.Size(111, 28);
+            this.btnreset.TabIndex = 12;
+            this.btnreset.Text = "Reset";
+            this.btnreset.UseVisualStyleBackColor = true;
+            this.btnreset.Click += new System.EventHandler(this.button2_Click);
             // 
             // pictureBox1
             // 
@@ -147,15 +147,15 @@
             this.BackColor = System.Drawing.Color.Bisque;
             this.ClientSize = new System.Drawing.Size(339, 263);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.NP2);
-            this.Controls.Add(this.NP);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.OP);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnreset);
+            this.Controls.Add(this.btnsubmit);
+            this.Controls.Add(this.rtpasstxt);
+            this.Controls.Add(this.newpasstxt);
+            this.Controls.Add(this.lblnewpass);
+            this.Controls.Add(this.lblnpass);
+            this.Controls.Add(this.jnclbl);
+            this.Controls.Add(this.oldpasstxt);
+            this.Controls.Add(this.lbloldpass);
             this.MaximumSize = new System.Drawing.Size(355, 302);
             this.Name = "ChangePassword";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -169,15 +169,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox OP;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox NP;
-        private System.Windows.Forms.TextBox NP2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label lbloldpass;
+        private System.Windows.Forms.TextBox oldpasstxt;
+        private System.Windows.Forms.Label jnclbl;
+        private System.Windows.Forms.Label lblnpass;
+        private System.Windows.Forms.Label lblnewpass;
+        private System.Windows.Forms.TextBox newpasstxt;
+        private System.Windows.Forms.TextBox rtpasstxt;
+        private System.Windows.Forms.Button btnsubmit;
+        private System.Windows.Forms.Button btnreset;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
