@@ -19,14 +19,14 @@ namespace MyStore
             lbldate.Text = DateTime.Now.ToString();
             lblname.Text = user;
             lblqty.Text = item.ToString();
-            textBox4.Text = bil.ToString();
+            ttltxt.Text = bil.ToString();
             s = sid;
 
         }
 
         private void Bill_Load(object sender, EventArgs e)
         {
-            qd.GetSellProduct(dataGridView3,s);
+            qd.GetSellProduct(cartgrid,s);
 
         }
 
@@ -41,6 +41,11 @@ namespace MyStore
         }
 
         private void lblqty_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void thanklbl_Click(object sender, EventArgs e)
         {
 
         }
