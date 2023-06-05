@@ -19,18 +19,18 @@ namespace MyStore
 
         private void button2_Click(object sender, EventArgs e)
         {
-            PName.Text = "";
-            PPrice.Text = "";
-            PQuantity.Text = "";
+            PNametxt.Text = "";
+            PPricetxt.Text = "";
+            PQuantitytxt.Text = "";
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (qd.AddProduct(PName.Text, Convert.ToInt32(PPrice.Text), Convert.ToInt32(PQuantity.Text)))
+            if (qd.AddProduct(PNametxt.Text, Convert.ToInt32(PPricetxt.Text), Convert.ToInt32(PQuantitytxt.Text)))
             {
-                PName.Text = "";
-                PPrice.Text = "";
-                PQuantity.Text = "";
+                PNametxt.Text = "";
+                PPricetxt.Text = "";
+                PQuantitytxt.Text = "";
                 MessageBox.Show("Product add Sucessfuly");
 
             }
