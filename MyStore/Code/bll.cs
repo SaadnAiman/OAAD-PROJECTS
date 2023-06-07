@@ -169,11 +169,7 @@ namespace MyStore.Code
             }
             return temp;
         }
-
-
-
-
-
+        
         public bool CreateSellProduct(int sid, int pid, int qty, int price)
         {
 
@@ -185,9 +181,7 @@ namespace MyStore.Code
             }
             return temp;
         }
-
-
-
+        
         public bool AddProduct(String name,int price,int qty) {
 
             String query = String.Format("insert into Product values({0}+1,'{1}',{2},{3})",GetMaxID("Product"), name, price, qty);

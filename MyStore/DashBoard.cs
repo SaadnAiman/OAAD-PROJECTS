@@ -41,7 +41,7 @@ namespace MyStore
             {
                 if (user > 0)
                 {
-                    if (pb.CreateSell(DateTime.Now.ToString(), user, Convert.ToInt32(label10.Text), Convert.ToInt32(label7.Text), pb.ID))
+                    if (pb.CreateSell(DateTime.Now.ToString(), user, Convert.ToInt32(label10.Text), Convert.ToInt32(priceafterdiscountlbl.Text), pb.ID))
                     {
                         int b = 0;
                         int sid = pb.GetMaxID("Sell");
@@ -60,7 +60,7 @@ namespace MyStore
                             else { MessageBox.Show("there is an erroe " + b); }
                             b++;
                         }
-                        Bill bi = new Bill(b, BName.Text, (Convert.ToInt32(label7.Text)), sid);
+                        Bill bi = new Bill(b, BName.Text, (Convert.ToInt32(priceafterdiscountlbl.Text)), sid);
                         bi.Show();
                         BName.Text = "";
                         BMobile.Text = "";
@@ -68,8 +68,8 @@ namespace MyStore
                         textBox4.Text = "0";
                         dataGridView3.Rows.Clear();
                         dataGridView3.Refresh();
-                        label7.Text = "0";
-                        minus.Text = "( 0 - 0 )";
+                        priceafterdiscountlbl.Text = "0";
+                        pricediscountlbl.Text = "( 0 - 0 )";
 
                     }
                 }
@@ -81,7 +81,7 @@ namespace MyStore
                         user = pb.CheckUserExist(BName.Text, BMobile.Text);
                         if (user > 0)
                         {
-                            if (pb.CreateSell(DateTime.Now.ToString(), user, Convert.ToInt32(label10.Text), Convert.ToInt32(label7.Text), pb.ID))
+                            if (pb.CreateSell(DateTime.Now.ToString(), user, Convert.ToInt32(label10.Text), Convert.ToInt32(priceafterdiscountlbl.Text), pb.ID))
                             {
                                 int b = 0;
                                 int sid = pb.GetMaxID("Sell");
@@ -100,7 +100,7 @@ namespace MyStore
                                     else { MessageBox.Show("SellProduct insert Erroe " + b); }
                                     b++;
                                 }
-                                Bill bi = new Bill(b + 1, BName.Text, (Convert.ToInt32(label7.Text)), sid);
+                                Bill bi = new Bill(b + 1, BName.Text, (Convert.ToInt32(priceafterdiscountlbl.Text)), sid);
                                 bi.Show();
                                 BName.Text = "";
                                 BMobile.Text = "";
@@ -108,8 +108,8 @@ namespace MyStore
                                 textBox4.Text = "0";
                                 dataGridView3.Rows.Clear();
                                 dataGridView3.Refresh();
-                                label7.Text = "0";
-                                minus.Text = "( 0 - 0 )";
+                                priceafterdiscountlbl.Text = "0";
+                                pricediscountlbl.Text = "( 0 - 0 )";
                             }
 
                         }
@@ -180,29 +180,29 @@ namespace MyStore
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             Search.Text = dataGridView1.SelectedCells[0].Value.ToString();
-            textBox1.Text = dataGridView1.SelectedCells[2].Value.ToString();
+            qtytxt.Text = dataGridView1.SelectedCells[2].Value.ToString();
             label8.Text = dataGridView1.SelectedCells[2].Value.ToString();
-            textBox2.Text = dataGridView1.SelectedCells[1].Value.ToString();
+            priceautotxt.Text = dataGridView1.SelectedCells[1].Value.ToString();
             label11.Text = dataGridView1.SelectedCells[3].Value.ToString();
             
-            textBox1.Select();
+            qtytxt.Select();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text != "")
+            if (qtytxt.Text != "")
             {
-                if (Convert.ToInt32(textBox1.Text) > 0)
+                if (Convert.ToInt32(qtytxt.Text) > 0)
                 {
-                    label9.Text = (Convert.ToInt32(textBox1.Text) * Convert.ToInt32(textBox2.Text)).ToString();
-                    string[] row = new string[] { Search.Text, textBox1.Text, textBox2.Text, label9.Text,label11.Text };
-                    if ((Convert.ToInt32(textBox1.Text)) <= (Convert.ToInt32(label8.Text)))
+                    label9.Text = (Convert.ToInt32(qtytxt.Text) * Convert.ToInt32(priceautotxt.Text)).ToString();
+                    string[] row = new string[] { Search.Text, qtytxt.Text, priceautotxt.Text, label9.Text,label11.Text };
+                    if ((Convert.ToInt32(qtytxt.Text)) <= (Convert.ToInt32(label8.Text)))
                     {
                         dataGridView3.Rows.Add(row);
 
                         Search.Text = "";
-                        textBox1.Text = "";
-                        textBox2.Text = "";
+                        qtytxt.Text = "";
+                        priceautotxt.Text = "";
                         textBox4.Text = "";
                         int a = 0;
                         int total = 0;
@@ -219,8 +219,8 @@ namespace MyStore
                             discount = (int)((btotal * Convert.ToInt32(textBox5.Text)) / 100);
                         }
                         label10.Text = discount.ToString();
-                        minus.Text = "( " + btotal.ToString() + " - " + discount.ToString() + " )";
-                        label7.Text = (btotal - discount).ToString();
+                        pricediscountlbl.Text = "( " + btotal.ToString() + " - " + discount.ToString() + " )";
+                        priceafterdiscountlbl.Text = (btotal - discount).ToString();
 
                     }
                     else
@@ -254,16 +254,16 @@ namespace MyStore
                 discount = (int)((btotal * Convert.ToInt32(textBox5.Text)) / 100);
             }
             label10.Text = discount.ToString();
-            minus.Text = "( " + btotal.ToString() + " - " + discount.ToString() + " )";
-            label7.Text = (btotal - discount).ToString();
+            pricediscountlbl.Text = "( " + btotal.ToString() + " - " + discount.ToString() + " )";
+            priceafterdiscountlbl.Text = (btotal - discount).ToString();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             dataGridView3.Rows.Clear();
             dataGridView3.Refresh();
-            minus.Text = "( 0 - 0 )";
-            label7.Text = "0";
+            pricediscountlbl.Text = "( 0 - 0 )";
+            priceafterdiscountlbl.Text = "0";
             textBox4.Text = "0";
             label10.Text ="0";
 
@@ -279,8 +279,8 @@ namespace MyStore
                 {
                     discount = (int)((btotal * Convert.ToInt32(textBox5.Text)) / 100);
                 }
-                minus.Text = "( " + btotal.ToString() + " - " + discount.ToString() + " )";
-                label7.Text = (btotal - discount).ToString();
+                pricediscountlbl.Text = "( " + btotal.ToString() + " - " + discount.ToString() + " )";
+                priceafterdiscountlbl.Text = (btotal - discount).ToString();
                 label10.Text = discount.ToString();
             }
         }

@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.UMale = new System.Windows.Forms.RadioButton();
             this.UFemale = new System.Windows.Forms.RadioButton();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblgender = new System.Windows.Forms.Label();
+            this.lblmobile = new System.Windows.Forms.Label();
+            this.lbladdress = new System.Windows.Forms.Label();
             this.UAddress = new System.Windows.Forms.TextBox();
             this.UMobile = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnreset = new System.Windows.Forms.Button();
+            this.btnsave = new System.Windows.Forms.Button();
             this.UEmail = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.UName = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.jnclbl = new System.Windows.Forms.Label();
+            this.UNametxt = new System.Windows.Forms.TextBox();
+            this.lblemail = new System.Windows.Forms.Label();
+            this.lblname = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -55,22 +55,33 @@
             this.panel1.BackColor = System.Drawing.Color.Bisque;
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.lblgender);
+            this.panel1.Controls.Add(this.lblmobile);
+            this.panel1.Controls.Add(this.lbladdress);
             this.panel1.Controls.Add(this.UAddress);
             this.panel1.Controls.Add(this.UMobile);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.btnreset);
+            this.panel1.Controls.Add(this.btnsave);
             this.panel1.Controls.Add(this.UEmail);
-            this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.UName);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.jnclbl);
+            this.panel1.Controls.Add(this.UNametxt);
+            this.panel1.Controls.Add(this.lblemail);
+            this.panel1.Controls.Add(this.lblname);
             this.panel1.Location = new System.Drawing.Point(2, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(314, 373);
             this.panel1.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::MyStore.Properties.Resources.IMG_2203;
+            this.pictureBox1.InitialImage = global::MyStore.Properties.Resources.IMG_2203;
+            this.pictureBox1.Location = new System.Drawing.Point(19, 10);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(65, 68);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 14;
+            this.pictureBox1.TabStop = false;
             // 
             // groupBox1
             // 
@@ -105,35 +116,35 @@
             this.UFemale.Text = "Female";
             this.UFemale.UseVisualStyleBackColor = true;
             // 
-            // label6
+            // lblgender
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(27, 172);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 19);
-            this.label6.TabIndex = 12;
-            this.label6.Text = "Gender";
+            this.lblgender.AutoSize = true;
+            this.lblgender.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblgender.Location = new System.Drawing.Point(27, 172);
+            this.lblgender.Name = "lblgender";
+            this.lblgender.Size = new System.Drawing.Size(57, 19);
+            this.lblgender.TabIndex = 12;
+            this.lblgender.Text = "Gender";
             // 
-            // label5
+            // lblmobile
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(27, 209);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(53, 19);
-            this.label5.TabIndex = 11;
-            this.label5.Text = "Mobile";
+            this.lblmobile.AutoSize = true;
+            this.lblmobile.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblmobile.Location = new System.Drawing.Point(27, 209);
+            this.lblmobile.Name = "lblmobile";
+            this.lblmobile.Size = new System.Drawing.Size(53, 19);
+            this.lblmobile.TabIndex = 11;
+            this.lblmobile.Text = "Mobile";
             // 
-            // label4
+            // lbladdress
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(27, 247);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 19);
-            this.label4.TabIndex = 10;
-            this.label4.Text = "Address";
+            this.lbladdress.AutoSize = true;
+            this.lbladdress.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbladdress.Location = new System.Drawing.Point(27, 247);
+            this.lbladdress.Name = "lbladdress";
+            this.lbladdress.Size = new System.Drawing.Size(59, 19);
+            this.lbladdress.TabIndex = 10;
+            this.lbladdress.Text = "Address";
             // 
             // UAddress
             // 
@@ -151,27 +162,27 @@
             this.UMobile.Size = new System.Drawing.Size(163, 25);
             this.UMobile.TabIndex = 8;
             // 
-            // button2
+            // btnreset
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(31, 330);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(111, 28);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Reset";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnreset.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnreset.Location = new System.Drawing.Point(31, 330);
+            this.btnreset.Name = "btnreset";
+            this.btnreset.Size = new System.Drawing.Size(111, 28);
+            this.btnreset.TabIndex = 7;
+            this.btnreset.Text = "Reset";
+            this.btnreset.UseVisualStyleBackColor = true;
+            this.btnreset.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // btnsave
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(174, 330);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 28);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnsave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnsave.Location = new System.Drawing.Point(174, 330);
+            this.btnsave.Name = "btnsave";
+            this.btnsave.Size = new System.Drawing.Size(111, 28);
+            this.btnsave.TabIndex = 6;
+            this.btnsave.Text = "Save";
+            this.btnsave.UseVisualStyleBackColor = true;
+            this.btnsave.Click += new System.EventHandler(this.button1_Click);
             // 
             // UEmail
             // 
@@ -181,56 +192,45 @@
             this.UEmail.Size = new System.Drawing.Size(163, 25);
             this.UEmail.TabIndex = 5;
             // 
-            // label3
+            // jnclbl
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.SaddleBrown;
-            this.label3.Location = new System.Drawing.Point(90, 21);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(220, 36);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "jewels.n.Crafts";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.jnclbl.AutoSize = true;
+            this.jnclbl.Font = new System.Drawing.Font("Times New Roman", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jnclbl.ForeColor = System.Drawing.Color.SaddleBrown;
+            this.jnclbl.Location = new System.Drawing.Point(90, 21);
+            this.jnclbl.Name = "jnclbl";
+            this.jnclbl.Size = new System.Drawing.Size(220, 36);
+            this.jnclbl.TabIndex = 4;
+            this.jnclbl.Text = "jewels.n.Crafts";
+            this.jnclbl.Click += new System.EventHandler(this.label3_Click);
             // 
-            // UName
+            // UNametxt
             // 
-            this.UName.Location = new System.Drawing.Point(122, 83);
-            this.UName.Multiline = true;
-            this.UName.Name = "UName";
-            this.UName.Size = new System.Drawing.Size(163, 25);
-            this.UName.TabIndex = 2;
+            this.UNametxt.Location = new System.Drawing.Point(122, 83);
+            this.UNametxt.Multiline = true;
+            this.UNametxt.Name = "UNametxt";
+            this.UNametxt.Size = new System.Drawing.Size(163, 25);
+            this.UNametxt.TabIndex = 2;
             // 
-            // label2
+            // lblemail
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(27, 132);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 19);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Email";
+            this.lblemail.AutoSize = true;
+            this.lblemail.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblemail.Location = new System.Drawing.Point(27, 132);
+            this.lblemail.Name = "lblemail";
+            this.lblemail.Size = new System.Drawing.Size(47, 19);
+            this.lblemail.TabIndex = 1;
+            this.lblemail.Text = "Email";
             // 
-            // label1
+            // lblname
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(27, 88);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 19);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Name";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::MyStore.Properties.Resources.IMG_2203;
-            this.pictureBox1.InitialImage = global::MyStore.Properties.Resources.IMG_2203;
-            this.pictureBox1.Location = new System.Drawing.Point(19, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(65, 68);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
+            this.lblname.AutoSize = true;
+            this.lblname.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblname.Location = new System.Drawing.Point(27, 88);
+            this.lblname.Name = "lblname";
+            this.lblname.Size = new System.Drawing.Size(47, 19);
+            this.lblname.TabIndex = 0;
+            this.lblname.Text = "Name";
             // 
             // CreateUser
             // 
@@ -244,9 +244,9 @@
             this.Load += new System.EventHandler(this.CreateUser_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -255,18 +255,18 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblgender;
+        private System.Windows.Forms.Label lblmobile;
+        private System.Windows.Forms.Label lbladdress;
         private System.Windows.Forms.TextBox UAddress;
         private System.Windows.Forms.TextBox UMobile;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnreset;
+        private System.Windows.Forms.Button btnsave;
         private System.Windows.Forms.TextBox UEmail;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox UName;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label jnclbl;
+        private System.Windows.Forms.TextBox UNametxt;
+        private System.Windows.Forms.Label lblemail;
+        private System.Windows.Forms.Label lblname;
         private System.Windows.Forms.RadioButton UMale;
         private System.Windows.Forms.RadioButton UFemale;
         private System.Windows.Forms.PictureBox pictureBox1;

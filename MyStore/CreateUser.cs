@@ -22,7 +22,7 @@ namespace MyStore
             UEmail.Text = "";
             UMobile.Text="";
             UAddress.Text = "";
-            UName.Text = "";
+            UNametxt.Text = "";
             
 
         }
@@ -32,7 +32,7 @@ namespace MyStore
                 String EMAIL = UEmail.Text;
                 if (!qdb.CheckUser(EMAIL))
                   {
-                    String NAME = UName.Text;
+                    String NAME = UNametxt.Text;
                     String ADDRESS = UAddress.Text;
                     String MOBILE = UMobile.Text;
                     String GENDER=" ";
