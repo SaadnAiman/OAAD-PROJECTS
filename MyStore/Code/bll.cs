@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using System.Data.OleDb;
 using System.Data;
+using System.Data.SqlClient;
+using System.Web;
+
 
 namespace MyStore.Code
 {
 
     public class bll
     {
-        BussinessLogic bl = new BussinessLogic();
+        dataaccess bl = new dataaccess();
 
         public int ID { 
             get;
@@ -37,7 +39,7 @@ namespace MyStore.Code
         {
             bool temp = false;
             string query = string.Format("select count(*) from Admin where Email='{0}' and Password = '{1}'", qdb.EMAIL, qdb.PASSWORD);
-            OleDbDataReader rec = bl.SelectQuery(query);
+            SqlDataReader rec = bl.SelectQuery(query);
             while (rec.Read())
             {
                 if (rec[0].ToString().Equals("1"))
@@ -54,7 +56,7 @@ namespace MyStore.Code
         {
 
             string query = string.Format("select ID,Email,Password,Type from Admin where Email='{0}' and Password = '{1}'", cdb.EMAIL, cdb.PASSWORD);
-            OleDbDataReader rec = bl.SelectQuery(query);
+            SqlDataReader rec = bl.SelectQuery(query);
 
             while (rec.Read())
             {
@@ -77,7 +79,7 @@ namespace MyStore.Code
         {
             bool temp = false;
             string query = string.Format("select count(*) from UserData where UEmail= '{0}' ", email);
-            OleDbDataReader rec = bl.SelectQuery(query);
+            SqlDataReader rec = bl.SelectQuery(query);
             while (rec.Read())
             {
                 if (Convert.ToInt32((rec[0].ToString())) >= 1)
@@ -95,7 +97,7 @@ namespace MyStore.Code
         {
             
             string query = string.Format("select ID from UserData where UName= '{0}' and UMobile='{1}' ", name,mobile);
-            OleDbDataReader rec = bl.SelectQuery(query);
+            SqlDataReader rec = bl.SelectQuery(query);
             while (rec.Read())
             {
                 if (Convert.ToInt32((rec[0].ToString())) >= 1)
@@ -114,7 +116,7 @@ namespace MyStore.Code
         {
 
             String query = String.Format("Select Max(id) From {0}", tab);
-            OleDbDataReader rec = bl.SelectQuery(query);
+            SqlDataReader rec = bl.SelectQuery(query);
             while (rec.Read())
             {
                 if (!rec[0].ToString().Equals(""))

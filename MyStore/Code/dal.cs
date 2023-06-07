@@ -4,18 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Configuration;
 using System.Data;
-using System.Data.OleDb;
 using System.Windows.Forms;
+using System.Data.SqlClient;
+using System.Web;
+
 namespace MyStore
 {
-    class BussinessLogic
+    class dataaccess
+  
     {
         string con = ConfigurationManager.ConnectionStrings["MyDB"].ConnectionString;
-        OleDbConnection cn;
-        OleDbCommand cmd;
+        SqlConnection cn;
+        SqlCommand cmd;
+
         void openConnection()
         {
-            cn = new OleDbConnection(con);
+            cn = new SqlConnection(con);
             cn.Open();
         }
         void closeConnection()
@@ -25,16 +29,16 @@ namespace MyStore
                 cn.Close();
             }
         }
-        public OleDbDataReader SelectQuery(String query)
+        public SqlDataReader SelectQuery(String query)
         {
             openConnection();
-            cmd = new OleDbCommand(query, cn);
+            cmd = new SqlCommand(query, cn);
             return cmd.ExecuteReader();
         }
         public int NonQuery(String query)
         {
             openConnection();
-            cmd = new OleDbCommand(query, cn);
+            cmd = new SqlCommand(query, cn);
             int temp = cmd.ExecuteNonQuery();
             closeConnection();
             return temp;
@@ -42,7 +46,7 @@ namespace MyStore
         public void FillComboBox(ComboBox cb, string query)
         {
             openConnection();
-            OleDbDataReader rec = SelectQuery(query);
+            SqlDataReader rec = SelectQuery(query);
             while (rec.Read())
             {
                 cb.Items.Add(rec[0].ToString());
@@ -51,8 +55,8 @@ namespace MyStore
         public void filldataGrid(DataGridView dg, String query)
         {
             openConnection();
-            cmd = new OleDbCommand(query, cn);
-            OleDbDataAdapter adp = new OleDbDataAdapter(cmd);
+            cmd = new SqlCommand(query, cn);
+            SqlDataAdapter adp = new SqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             adp.Fill(ds);
             dg.DataSource = ds.Tables[0];
